@@ -1,0 +1,369 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+:root {
+  --cor-primaria: #183828;      /* verde principal */
+  --cor-primaria-escura: #3c8d65;
+  --cor-secundaria: #f4a340;    /* laranja pra dar uma destacada */
+  --cor-fundo: #fbf8f2;         /* bege clarin */
+  --cor-fundo-alt: #ffffff;
+  --cor-texto: #333333;
+  --cor-texto-claro: #ffffff;
+  --sombra: 0 4px 10px rgba(0, 0, 0, 0.08);
+  --raio: 14px;
+}
+
+body {
+  font-family: 'Trebuchet MS', Verdana, Arial, sans-serif;
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+
+header {
+  background: linear-gradient(135deg, var(--cor-primaria), var(--cor-primaria-escura));
+  color: var(--cor-texto-claro);
+  padding: 30px 20px 20px 20px;
+  text-align: center;
+}
+
+header .logo {
+  font-size: 2.4rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+header .logo span {
+  color: var(--cor-secundaria);
+}
+
+header .slogan {
+  font-size: 1rem;
+  font-style: italic;
+  margin-top: 6px;
+  opacity: 0.9;
+}
+
+/*Menu para navegaçao*/
+nav {
+  background-color: var(--cor-primaria-escura);
+  padding: 0;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+nav ul li {
+  margin: 0;
+}
+
+nav ul li a {
+  display: block;
+  color: var(--cor-texto-claro);
+  text-decoration: none;
+  padding: 16px 26px;
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border-bottom: 3px solid transparent;
+}
+
+
+nav ul li a:hover {
+  background-color: var(--cor-secundaria);
+  color: var(--cor-primaria-escura);
+  border-bottom: 3px solid var(--cor-primaria-escura);
+}
+
+
+nav ul li a.ativo {
+  background-color: var(--cor-secundaria);
+  color: var(--cor-primaria-escura);
+}
+
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 20px 60px 20px;
+}
+
+section {
+  margin-bottom: 50px;
+}
+
+h1 {
+  font-size: 2rem;
+  color: var(--cor-primaria-escura);
+  margin-bottom: 16px;
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: var(--cor-primaria);
+  margin-bottom: 14px;
+  border-left: 6px solid var(--cor-secundaria);
+  padding-left: 12px;
+}
+
+p {
+  font-size: 1rem;
+  margin-bottom: 14px;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  background-color: var(--cor-fundo-alt);
+  border-radius: var(--raio);
+  box-shadow: var(--sombra);
+  padding: 36px;
+  flex-wrap: wrap;
+}
+
+.hero-texto {
+  flex: 1 1 320px;
+}
+
+.hero-texto h1 {
+  font-size: 2.2rem;
+}
+
+.hero-texto .destaque {
+  color: var(--cor-secundaria);
+}
+
+.hero-imagem {
+  flex: 1 1 260px;
+  display: flex;
+  justify-content: center;
+}
+
+
+.imagem-css {
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, var(--cor-secundaria), var(--cor-primaria));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 5.5rem;
+  box-shadow: var(--sombra);
+  border: 6px solid var(--cor-fundo-alt);
+}
+
+.imagem-css.pequena {
+  width: 180px;
+  height: 180px;
+  font-size: 4rem;
+}
+/*foto redonda tive que dar um busque pra conseguir fazer isso*/
+.foto-redonda {
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: var(--sombra);
+  border: 6px solid var(--cor-fundo-alt);
+}
+
+.foto-redonda.pequena {
+  width: 180px;
+  height: 180px;
+}
+
+.sobre-caixa {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  background-color: var(--cor-fundo-alt);
+  border-radius: var(--raio);
+  box-shadow: var(--sombra);
+  padding: 32px;
+  flex-wrap: wrap;
+}
+
+.sobre-texto {
+  flex: 2 1 320px;
+}
+
+.sobre-imagem {
+  flex: 1 1 200px;
+  display: flex;
+  justify-content: center;
+}
+
+.valores {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 24px;
+}
+
+.valor-item {
+  flex: 1 1 200px;
+  background-color: var(--cor-fundo);
+  border: 1px solid #e6ded0;
+  border-radius: var(--raio);
+  padding: 18px;
+  text-align: center;
+}
+
+.valor-item .icone {
+  font-size: 2rem;
+  margin-bottom: 8px;
+}
+
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+}
+
+.card {
+  background-color: var(--cor-fundo-alt);
+  border-radius: var(--raio);
+  box-shadow: var(--sombra);
+  padding: 24px;
+  flex: 1 1 230px;
+  max-width: 260px;
+  text-align: center;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  border-top: 5px solid var(--cor-secundaria);
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.15);
+}
+
+.card .icone {
+  font-size: 3rem;
+  margin-bottom: 12px;
+}
+
+.card h3 {
+  font-size: 1.15rem;
+  color: var(--cor-primaria-escura);
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 0.92rem;
+  color: #555;
+  margin-bottom: 0;
+}
+
+.card .preco {
+  display: inline-block;
+  margin-top: 12px;
+  background-color: var(--cor-primaria);
+  color: var(--cor-texto-claro);
+  font-weight: bold;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+/*contatin*/
+.contato-caixas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.contato-item {
+  flex: 1 1 240px;
+  background-color: var(--cor-fundo-alt);
+  border-radius: var(--raio);
+  box-shadow: var(--sombra);
+  padding: 26px;
+  border-left: 6px solid var(--cor-primaria);
+}
+
+.contato-item h2 {
+  border-left: none;
+  padding-left: 0;
+  font-size: 1.2rem;
+}
+
+.contato-item .icone {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.redes-sociais {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+
+.redes-sociais span {
+  background-color: var(--cor-fundo);
+  border: 1px solid #e6ded0;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+
+.mapa {
+  margin-top: 20px;
+  height: 200px;
+  border-radius: var(--raio);
+  background: repeating-linear-gradient(
+    45deg,
+    #e9e2d4,
+    #e9e2d4 10px,
+    #f4efe4 10px,
+    #f4efe4 20px
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #7a7263;
+  font-weight: bold;
+  border: 1px dashed #b9ae97;
+}
+
+footer {
+  background-color: var(--cor-primaria-escura);
+  color: var(--cor-texto-claro);
+  text-align: center;
+  padding: 22px 10px;
+  font-size: 0.9rem;
+}
+/*parte responsiva simples*/
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero, .sobre-caixa {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-imagem, .sobre-imagem {
+    justify-content: center;
+  }
+}
