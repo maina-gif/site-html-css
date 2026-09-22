@@ -39,7 +39,7 @@
         <div class="contato-item">
           <div class="icone"></div>
           <h2>Telefone</h2>
-          <p>(31) 1234-5678<br>(31) 91234-5678 (WhatsApp)</p>
+          <p>(31) 9234-5678<br>(31) 91234-5678 (WhatsApp)</p>
         </div>
 
         <div class="contato-item">
@@ -60,11 +60,131 @@
 
       </div>
 
-      <div class="mapa">  - Rua rio de janeiro, 222</div>
+      <div class="mapa">
+        <iframe
+                src="https://www.google.com/maps?q=Rua+Rio+de+Janeiro,+222&output=embed"
+                width="100%"
+                height="100%"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
 
     </section>
 
   </main>
+  <section id="pesquisa-satisfacao">
+    <h1>Pesquisa de Satisfação</h1>
+    <p>Sua opinião ajuda a gente a cuidar ainda melhor do seu pet. Leva menos de 2 minutinhos!</p>
+
+    <form class="formulario-pesquisa">
+
+      <fieldset>
+        <legend>Dados do cliente</legend>
+
+        <div class="campo">
+          <label for="nome">Nome completo <span class="obrigatorio">*</span></label>
+          <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required>
+        </div>
+
+        <div class="campo">
+          <label for="email">E-mail <span class="obrigatorio">*</span></label>
+          <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required>
+        </div>
+
+        <div class="campo">
+          <label for="telefone">Telefone</label>
+          <input type="tel" id="telefone" name="telefone" placeholder="(11) 91234-5678">
+        </div>
+
+        <div class="campo">
+          <label for="idade">Idade</label>
+          <input type="number" id="idade" name="idade" min="0" max="120" placeholder="Ex: 30">
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Como você avalia sua experiência? <span class="obrigatorio">*</span></legend>
+        <div class="opcoes-radio">
+          <label class="radio-item"><input type="radio" name="experiencia" value="muito-satisfeito" required> Muito satisfeito</label>
+          <label class="radio-item"><input type="radio" name="experiencia" value="satisfeito"> Satisfeito</label>
+          <label class="radio-item"><input type="radio" name="experiencia" value="neutro"> Neutro</label>
+          <label class="radio-item"><input type="radio" name="experiencia" value="insatisfeito"> Insatisfeito</label>
+          <label class="radio-item"><input type="radio" name="experiencia" value="muito-insatisfeito"> Muito insatisfeito</label>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Dê uma nota de 1 a 5</legend>
+        <div class="estrelas">
+          <input type="radio" name="nota" id="nota5" value="5"><label for="nota5" title="5 estrelas">★</label>
+          <input type="radio" name="nota" id="nota4" value="4"><label for="nota4" title="4 estrelas">★</label>
+          <input type="radio" name="nota" id="nota3" value="3"><label for="nota3" title="3 estrelas">★</label>
+          <input type="radio" name="nota" id="nota2" value="2"><label for="nota2" title="2 estrelas">★</label>
+          <input type="radio" name="nota" id="nota1" value="1"><label for="nota1" title="1 estrela">★</label>
+        </div>
+      </fieldset>
+
+      <div class="campo">
+        <label for="origem">Como conheceu a empresa?</label>
+        <select id="origem" name="origem">
+          <option value="" selected disabled>Selecione uma opção</option>
+          <option value="instagram">Instagram</option>
+          <option value="facebook">Facebook</option>
+          <option value="google">Google</option>
+          <option value="indicacao">Indicação de amigos</option>
+          <option value="youtube">YouTube</option>
+          <option value="outro">Outro</option>
+        </select>
+      </div>
+
+      <div class="campo">
+        <label for="servico">Qual serviço você utilizou? <span class="obrigatorio">*</span></label>
+        <select id="servico" name="servico" required>
+          <option value="" selected disabled>Selecione uma opção</option>
+          <option value="banho-tosa">Banho e Tosa</option>
+          <option value="consulta-veterinaria">Consulta Veterinária</option>
+          <option value="hotel-pet">Hotel para Pets</option>
+          <option value="adestramento">Adestramento</option>
+          <option value="produtos">Compra de Produtos</option>
+        </select>
+      </div>
+
+      <fieldset>
+        <legend>Você recomendaria nossa empresa para outras pessoas?</legend>
+        <div class="opcoes-radio">
+          <label class="radio-item"><input type="radio" name="recomendacao" value="sim"> Sim</label>
+          <label class="radio-item"><input type="radio" name="recomendacao" value="talvez"> Talvez</label>
+          <label class="radio-item"><input type="radio" name="recomendacao" value="nao"> Não</label>
+        </div>
+      </fieldset>
+
+      <div class="campo">
+        <label for="comentarios">Conte-nos o que podemos melhorar:</label>
+        <textarea id="comentarios" name="comentarios" rows="4" placeholder="Escreva aqui sua opinião..."></textarea>
+      </div>
+
+      <div class="campo">
+        <label for="data-servico">Data em que utilizou o serviço</label>
+        <input type="date" id="data-servico" name="data-servico">
+      </div>
+
+      <div class="campo campo-checkbox">
+        <input type="checkbox" id="newsletter" name="newsletter">
+        <label for="newsletter">Quero receber novidades e promoções por e-mail</label>
+      </div>
+
+      <p class="nota-obrigatorio"><span class="obrigatorio">*</span> Campos obrigatórios</p>
+
+      <div class="botoes-form">
+        <button type="submit" class="btn-enviar">Enviar avaliação</button>
+        <button type="reset" class="btn-limpar">Limpar formulário</button>
+      </div>
+
+    </form>
+  </section>
 
   <footer>
     &copy; 2026 patrulha canina
